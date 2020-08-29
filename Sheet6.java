@@ -8,7 +8,7 @@ public class Sheet6 {
 
 		Scanner sc = new Scanner(System.in);
 		// 1
-		System.out.print("Enter string : ");
+/*		System.out.print("Enter string : ");
 		String string = sc.nextLine();
 		count(string);
 		System.out.println("--------------------------------------");
@@ -22,7 +22,9 @@ public class Sheet6 {
 		System.out.println("--------------------------------------");
 		// 4
 		System.out.println("Enter 2 String for rotaion check : ");
+		System.out.print("First String: ");
 		String str1 = sc.nextLine();
+		System.out.print("Second String: ");
 		String str2 = sc.nextLine();
 		isRotation(str1, str2);
 		System.out.println("--------------------------------------");
@@ -33,10 +35,12 @@ public class Sheet6 {
 		System.out.println("--------------------------------------");
 		// 6
 		findLargestSmallestWords(s);
-		System.out.println("--------------------------------------");
+		System.out.println("--------------------------------------");*/
 		// 7
 		System.out.println("Enter two string for swap : ");
+		System.out.print("First String: ");
 		String s1 = sc.nextLine();
+		System.out.print("Second String: ");
 		String s2 = sc.nextLine();
 		swap(s1, s2);
 		System.out.println("--------------------------------------");
@@ -69,25 +73,43 @@ public class Sheet6 {
 	}
 
 	private static void isPalindrome(String str) {
-		char ch[] = str.toCharArray();
-		int n = str.length(), low = 0, high = n - 1;
-		boolean b = false;
-		for (int i = 0; i < n / 2; i++) {
-			if (ch[i] == ch[high]) {
-				b = true;
+		int high = str.length() - 1;
+		boolean flag = true;
+		for (int low = 0; low < high; low++) {
+			if (str.charAt(low) == str.charAt(high)) {
 				high--;
 			} else {
-				b = false;
+				flag = false;
 				break;
 			}
 		}
-		if (b) {
+		if (flag) {
 			System.out.println("Palindrome.");
 		} else {
 			System.out.println("Not Palindrome.");
 		}
 
 	}
+	
+/*	private static void isPalindrome(String str) {
+		int left = 0;
+		int right = str.length() - 1;
+		boolean flag = true;
+		while(left <= right) {
+			if(str.charAt(left) == str.charAt(right)) {
+				left++;
+				right--;
+			}else {
+				flag = false;
+				break;
+			}
+		}
+		if (flag) {
+			System.out.println("Palindrome.");
+		} else {
+			System.out.println("Not Palindrome.");
+		}
+	}*/
 
 	private static void isRotation(String str1, String str2) {
 		if (str1.length() != str2.length()) {
@@ -102,11 +124,11 @@ public class Sheet6 {
 		}
 
 	}
-
+	//Sushma		Ranju
 	private static void swap(String s1, String s2) {
-		s1 = s1 + s2;
+		s1 = s1 + s2; // SushmaRanju
 		s2 = s1.substring(0, s1.length() - s2.length());
-		s1 = s1.substring(s1.length() - s2.length(), s1.length());
+		s1 = s1.substring(s2.length() );
 		System.out.println("After Swap");
 		System.out.println("s1 : " + s1 + "   " + "s2 : " + s2);
 	}
