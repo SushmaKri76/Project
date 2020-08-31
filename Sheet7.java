@@ -39,7 +39,7 @@ public class Sheet7 {
 	}
 
 	private static int fact(int num) {
-		if (num == 1)
+		if (num == 1||num == 0)
 			return 1;
 		return num * fact(num - 1);
 	}
@@ -55,8 +55,7 @@ public class Sheet7 {
 	private static void table(int number, int i) {
 		if (i > 10)
 			return;
-		System.out.printf("%d * %d = %d", number, i, (number * i));
-		System.out.println();
+		System.out.printf("%d * %d = %d\n", number, i, (number * i));
 		table(number, ++i);
 	}
 
