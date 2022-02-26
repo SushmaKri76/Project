@@ -7,7 +7,7 @@ public class Sheet6 {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		// 1
+		
 /*		System.out.print("Enter string : ");
 		String string = sc.nextLine();
 		count(string);
